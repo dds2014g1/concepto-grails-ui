@@ -7,7 +7,7 @@ class BootStrap {
 
 	def init = { servletContext ->
 		println "Generamos juego de datos de materias"
-		initMaterias()
+//		initMaterias()
 	}
 	def destroy = {
 	}
