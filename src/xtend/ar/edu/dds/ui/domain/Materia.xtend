@@ -5,6 +5,7 @@ import java.util.ArrayList
 
 class Materia {
 	
+	@Property Long id
 	@Property String nombre
 	@Property String anioDeCursada
 	@Property String profesor
@@ -18,10 +19,18 @@ class Materia {
 		notas = new ArrayList
 	}
 	
-	def setUbicacion(Ubicacion ubicacion) {
-		println("Seteando ubicacion: " + ubicacion.toString)
-		this._ubicacion = ubicacion
+	def actualizarCon(Materia materia) {
+		this.nombre = materia.nombre
+		this.anioDeCursada = materia.anioDeCursada
+		this.profesor = materia.profesor
+		this.ubicacion = materia.ubicacion
+		this.finalAprobado = materia.finalAprobado
+		
+		this.notas = materia.notas
 	}
 	
-	
+	def Materia copy() {
+		super.clone as Materia
+	}
+
 }
