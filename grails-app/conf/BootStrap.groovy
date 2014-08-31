@@ -1,18 +1,11 @@
-import ar.edu.dds.ui.domain.Materia
-import ar.edu.dds.ui.domain.Nota
-import ar.edu.dds.ui.domain.Ubicacion
+import ar.edu.dds.ui.domain.Materia;
+import ar.edu.dds.ui.domain.Nota;
+import ar.edu.dds.ui.domain.Ubicacion;
 import ar.edu.dds.ui.home.MateriasHome;
 
 class BootStrap {
 
 	def init = { servletContext ->
-		println "Generamos juego de datos de materias"
-//		initMaterias()
-	}
-	def destroy = {
-	}
-
-	def void initMaterias() {
 		this.createMateria("Sistemas y Organizaciones",
 			     		   "2012",
 						   true,
@@ -62,6 +55,16 @@ class BootStrap {
 		materia.ubicacion = ubicacion
 		materia.notas = notas
 		
-		MateriasHome.getInstance().agregarMateria(null)
+		MateriasHome.getInstance().agregarMateria(materia)
+	}
+	
+	def newArrayList(Nota... notas) {
+		List<Nota> notasList = new ArrayList<Nota>()
+		notasList.addAll(notas)	
+		
+		return notasList
+	}
+	
+	def destroy = {
 	}
 }

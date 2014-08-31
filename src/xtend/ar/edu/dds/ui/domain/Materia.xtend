@@ -3,7 +3,7 @@ package ar.edu.dds.ui.domain
 import java.util.List
 import java.util.ArrayList
 
-class Materia {
+class Materia implements Cloneable {
 	
 	@Property Long id
 	@Property String nombre
