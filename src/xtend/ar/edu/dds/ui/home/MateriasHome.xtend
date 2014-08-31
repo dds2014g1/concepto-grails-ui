@@ -38,7 +38,7 @@ class MateriasHome {
 		return materias.sortBy [ -it.id ].toList.get(0).id.intValue
 	}
 
-	def actualizarLibro(Materia materiaActualizada) {
+	def actualizarMateria(Materia materiaActualizada) {
 		if (materiaActualizada.id == null) {
 			this.agregarMateria(materiaActualizada)
 		} else {
@@ -75,7 +75,13 @@ class MateriasHome {
 		materia.ubicacion = ubicacion
 		materia.notas = notas
 		
-//		this.create(materia)
+		agregarMateria(materia)
+	}
+	
+	def void create(String nuevoNombre) {
+		val materia = new Materia
+		materia.nombre = nuevoNombre
+		agregarMateria(materia)
 	}
 	
 }
