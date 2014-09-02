@@ -19,7 +19,8 @@ class Materia implements Cloneable {
 		notas = new ArrayList
 	}
 	
-	def actualizarCon(Materia materia) {
+	def actualizarCon(Materia materia
+	) {
 		this.nombre = materia.nombre
 		this.anioDeCursada = materia.anioDeCursada
 		this.profesor = materia.profesor
