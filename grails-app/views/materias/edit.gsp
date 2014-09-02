@@ -1,7 +1,7 @@
 <HTML>
 <head></head>
 <body>
-   	<h1>${materiaInstance.nombre}</h1>
+   	<h1>${materiaInstance?.nombre}</h1>
    	
    	<form class="form-horizontal" action="save" method="post">
 			<g:hiddenField name="id" value="${materiaInstance?.id}" />
@@ -37,7 +37,7 @@
 				<div class="col-md-12">
 					<div class="buttons">
 						<br>
-						<input type="submit" class="btn btn-primary" value="Aceptar" />
+						<g:actionSubmit class="btn btn-primary" action="save" value="Aceptar"/>
 						<g:link class="btn btn-primary" action="list">
 							Cancelar
 						</g:link>
