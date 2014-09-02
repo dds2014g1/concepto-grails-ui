@@ -42,23 +42,6 @@ class MateriasController {
 	}
 	
 	
-	def mostrar(Long id) {
-		edit(id)
-	}
-
-	
-	def edit(Long id) {
-		def materiaInstance = MateriasHome.instance.getMateria(id)
-		if (!materiaInstance) {
-			flash.message = "Materia " + id + " no encontrado"
-			redirect(action: "list")
-		}
-		else {
-			[materiaInstance: materiaInstance]
-		}
-	}
-	
-	
 	def mapear(materia, params) {
 		
 		if(params.nombre) {
@@ -92,13 +75,11 @@ class MateriasController {
 		
 	}
 	
-<<<<<<< HEAD
-	
-			
-=======
+
 	def edit(Long id){
 		def materia = MateriasHome.instance.getMateria(id)
 		[materiaInstance : materia]
 	}
->>>>>>> d6a29488f93ead0f150319d073a78346e51854ff
+	
+	
 }

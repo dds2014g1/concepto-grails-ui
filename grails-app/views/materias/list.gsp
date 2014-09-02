@@ -46,7 +46,7 @@
 											var="materiaInstance">
 											<tr class="${(i % 2) == 0 ? 'info' : ''}">
 												<td>
-													<g:link action="mostrar" id="${materiaInstance.id}">${materiaInstance.nombre}</g:link>
+													<g:link action="edit" id="${materiaInstance.id}">${materiaInstance.nombre}</g:link>
 												</td>
 												<td>${materiaInstance.profesor}</td>
 												<td>${materiaInstance.anioDeCursada}</td>

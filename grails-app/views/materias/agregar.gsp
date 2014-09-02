@@ -7,12 +7,12 @@
 	</head>
 	
 	<body>
-		<div style="background-color: #EEEEEE; width: 80%; margin-left: auto; margin-right: auto">
+		<div style="background-color: #EEEEEE; width: 90%; margin-left: auto; margin-right: auto">
 			
 			<div style="width: 90%; padding: 15pt;">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h1>Ingresar Nueva Materia</h1>
+						<h2>Ingresar Nueva Materia</h2>
 					</div>
 				</div>
 			</div>
