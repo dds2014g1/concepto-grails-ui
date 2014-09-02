@@ -7,7 +7,7 @@ import ar.edu.dds.ui.domain.Ubicacion
 import java.util.ArrayList
 
 class MateriasHome {
-	
+
 	List<Materia> materias
 
 	/** singleton **/
@@ -18,24 +18,23 @@ class MateriasHome {
 	}
 
 	static def getInstance() {
-		if(instance == null) {
-			instance = new MateriasHome	
+		if (instance == null) {
+			instance = new MateriasHome
 		}
 		instance
 	}
 
 	/** fin singleton **/
-	
 	def agregarMateria(Materia materia) {
 		materia.id = new Long(this.ultimoIdUtilizado.longValue + 1)
 		materias.add(materia)
 	}
-	
+
 	def int getUltimoIdUtilizado() {
 		if (materias.isEmpty) {
 			return 1
 		}
-		return materias.sortBy [ -it.id ].toList.get(0).id.intValue
+		return materias.sortBy[-it.id].toList.get(0).id.intValue
 	}
 
 	def actualizarMateria(Materia materiaActualizada) {
@@ -56,17 +55,13 @@ class MateriasHome {
 	}
 
 	def getMateria(Long id) {
-		materias.findFirst[m | m.id.equals(id)]
+		materias.findFirst[m|m.id.equals(id)]
 	}
 
 	// Altas y bajas
-	def void create(String nombre, 
-					String anioDeCursada,
-					Boolean finalAprobado, 
-					String profesor, 
-					Ubicacion ubicacion,
-					List<Nota> notas) {
-		
+	def void create(String nombre, String anioDeCursada, Boolean finalAprobado, String profesor,
+		Ubicacion ubicacion, List<Nota> notas) {
+
 		val materia = new Materia
 		materia.nombre = nombre
 		materia.anioDeCursada = anioDeCursada
@@ -74,14 +69,17 @@ class MateriasHome {
 		materia.profesor = profesor
 		materia.ubicacion = ubicacion
 		materia.notas = notas
-		
+
 		agregarMateria(materia)
 	}
-	
+
 	def void create(String nuevoNombre) {
-		val materia = new Materia
-		materia.nombre = nuevoNombre
-		agregarMateria(materia)
+		if (nuevoNombre != "") {
+			val materia = new Materia
+			materia.nombre = nuevoNombre
+			agregarMateria(materia)
+		}
 	}
+
 	
 }
