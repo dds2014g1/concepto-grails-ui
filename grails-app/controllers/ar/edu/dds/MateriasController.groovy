@@ -92,6 +92,13 @@ class MateriasController {
 		
 	}
 	
+<<<<<<< HEAD
 	
 			
+=======
+	def edit(Long id){
+		def materia = MateriasHome.instance.getMateria(id)
+		[materiaInstance : materia]
+	}
+>>>>>>> d6a29488f93ead0f150319d073a78346e51854ff
 }
