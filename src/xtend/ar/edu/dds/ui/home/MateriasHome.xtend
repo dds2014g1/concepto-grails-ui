@@ -57,6 +57,10 @@ class MateriasHome {
 	def getMateria(Long id) {
 		materias.findFirst[m|m.id.equals(id)]
 	}
+	
+	def boolean contieneMateria(String nombreMateria){
+		materias.map[m|m.nombre].contains(nombreMateria)
+	}
 
 	// Altas y bajas
 	def void create(String nombre, String anioDeCursada, Boolean finalAprobado, String profesor,
