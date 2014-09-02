@@ -3,7 +3,7 @@
 <body>
    	<h1>${materiaInstance?.nombre}</h1>
    	
-   	<form class="form-horizontal" action="save" method="post">
+   	<form class="form-horizontal" action="save" method="post" id = "${materiaInstance?.id}" >
 			<g:hiddenField name="id" value="${materiaInstance?.id}" />
 			<div class="row">
 	  			<div class="col-md-6">
@@ -13,6 +13,15 @@
 					</div>
 				</div>
 				
+				<div class="col-md-6">
+					<div>
+						<label class="control-label" for="anioDeCursada">Año de cursada</label>
+						<div class="controls">
+						<input class="form-control" type="text" name="anioDeCursada" id="anioDeCursada" placeholder="Año" value="${materiaInstance?.anioDeCursada}"/>
+						</div>
+					</div>
+				</div>
+								
 				<div class="col-md-6">
 						<label class="control-label" for="profesor">Profesor</label>
 						<div class="controls">
@@ -37,7 +46,7 @@
 				<div class="col-md-12">
 					<div class="buttons">
 						<br>
-						<g:actionSubmit class="btn btn-primary" action="save" id="${materiaInstance.id}" value="Aceptar"/>
+						<input type="submit" class="btn btn-primary" value="Aceptar" />
 						<g:actionSubmit class="btn btn-primary" action="list" value="Cancelar"/>
 					</div>
 				</div>
