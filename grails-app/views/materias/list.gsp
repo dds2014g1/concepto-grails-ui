@@ -22,7 +22,7 @@
 						<g:each in="${materias}" status="i"
 							var="materiaInstance">
 							<tr class="${(i % 2) == 0 ? 'info' : ''}">
-								<td><g:link action="show" id="${materiaInstance.id}">
+								<td><g:link action="edit" id="${materiaInstance.id}">
 										${materiaInstance.nombre}
 									</g:link></td>
 							</tr>

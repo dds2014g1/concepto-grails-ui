@@ -17,4 +17,9 @@ class MateriasController {
 		MateriasHome.instance.create(params.nuevoNombre)
 		redirect(action: "list", params: params)
 	}
+	
+	def edit(Long id){
+		def materia = MateriasHome.instance.getMateria(id)
+		[materiaInstance : materia]
+	}
 }
