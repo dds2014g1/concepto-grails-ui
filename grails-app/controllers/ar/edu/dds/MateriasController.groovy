@@ -87,12 +87,14 @@ def list() {
 		[materiaInstance : materia]
 	}
 
-	def save(Long id) {
+	def save() {
 		
 
 		def materiaInstance = null
 		def message = null
 
+		def id = params.id ? params.id as Long : null
+		
 		if (params.nombre){
 
 			materiaInstance = MateriasHome.getInstance().getMateria(id)

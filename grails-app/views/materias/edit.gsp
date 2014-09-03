@@ -1,14 +1,13 @@
-<HTML>
-<head>
+<html>
+
+	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="layout" content="main" />
 		<title>Editar materia</title>
-</head>
-<body>
+	</head>
 	
-	<h1>${materiaInstance?.nombre}</h1>
-	
-	<div style="background-color: #EEEEEE; width: 90%; margin-left: auto; margin-right: auto">
+	<body>
+		<div style="background-color: #EEEEEE; width: 90%; margin-left: auto; margin-right: auto">
 			
 			<div style="width: 90%; padding: 15pt;">
 				<div class="panel panel-default">
@@ -21,18 +20,18 @@
 			<div style="width: 90%; padding: 15pt;">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-		     			<form class="form-horizontal" action="save" method="post" id = "${materiaInstance?.id}" >
+						<form class="form-horizontal" action="save" method="post">
 							<g:hiddenField name="id" value="${materiaInstance?.id}" />
-							<div class="row"
-	  							<div class="col-md-6">
-	  								<div>
+							<div class="row">
+					  			<div class="col-md-6">
+									<div>
 										<label class="control-label" for="nombre">Nombre</label>
 										<div class="controls">
 											<input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" value="${materiaInstance?.nombre}" />
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">		
+								<div class="col-md-6">
 									<div>
 										<label class="control-label" for="anioDeCursada">A&ntilde;o de cursada</label>
 										<div class="controls">
@@ -52,7 +51,19 @@
 									<div>
 										<label class="control-label" for="ubicacion">Ubicaci&oacute;n</label>
 										<div class="controls">
-											<input class="form-control" type="text" name="ubicacion" id="ubicacion" placeholder="Ubicaci&oacute;n" value="${materiaInstance?.ubicacion}" />
+											<input class="form-control" type=text contenteditable="false" list=browsers name="ubicacion" id="ubicacion" placeholder="Ubicaci&oacute;n"/>
+												<datalist id=browsers >
+   													<option value=11 label="1er cuatrimestre - 1 nivel">
+   													<option value=12 label="2do cuatrimestre - 1 nivel">
+   													<option value=21 label="1er cuatrimestre - 2 nivel">
+   													<option value=22 label="2do cuatrimestre - 2 nivel">
+   													<option value=31 label="1er cuatrimestre - 3 nivel">
+   													<option value=32 label="2do cuatrimestre - 3 nivel">
+   													<option value=41 label="1er cuatrimestre - 4 nivel">
+   													<option value=42 label="2do cuatrimestre - 4 nivel">
+   													<option value=51 label="1er cuatrimestre - 5 nivel">
+   													<option value=52 label="2do cuatrimestre - 5 nivel">   																										
+												</datalist>											
 										</div>
 									</div>
 								</div>
@@ -75,5 +86,13 @@
 								</div>
 							</div>
 						</form>
-</body>
-</HTML>
+					</div>
+				</div>
+			</div>			
+		</div>
+</html>
+										
+										
+										
+		
+									
