@@ -17,8 +17,8 @@ class Nota {
 		this.descripcion = descripcion
 	}
 	
-	def boolean isAprobado () {
-		valor != null && valor > 4
+	def boolean isAprobado() {
+		valor != null && valor >= 4
 	}
 	
 	def Boolean estaCompleta() {

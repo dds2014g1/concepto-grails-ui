@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="layout" content="main" />
-		<title>Ingresar Nueva Materia</title>
+		<title>Ingresar nueva materia</title>
 	</head>
 	
 	<body>
@@ -12,7 +12,7 @@
 			<div style="width: 90%; padding: 15pt;">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h2>Ingresar Nueva Materia</h2>
+						<h2>Ingresar nueva materia</h2>
 					</div>
 				</div>
 			</div>
@@ -33,9 +33,9 @@
 								</div>
 								<div class="col-md-6">
 									<div>
-										<label class="control-label" for="anioDeCursada">Año de cursada</label>
+										<label class="control-label" for="anioDeCursada">A&ntilde;o de cursada</label>
 										<div class="controls">
-											<input class="form-control" type="text" name="anioDeCursada" id="anioDeCursada" placeholder="Año" value="${materiaInstance?.anioDeCursada}" />
+											<input class="form-control" type="text" name="anioDeCursada" id="anioDeCursada" placeholder="A&ntilde;o" value="${materiaInstance?.anioDeCursada}" />
 										</div>
 									</div>
 								</div>
@@ -49,9 +49,9 @@
 								</div>
 								<div class="col-md-6">
 									<div>
-										<label class="control-label" for="ubicacion">Ubicación</label>
+										<label class="control-label" for="ubicacion">Ubicaci&oacute;n</label>
 										<div class="controls">
-											<input class="form-control" type=text contenteditable="false" list=browsers name="ubicacion" id="ubicacion" placeholder="Ubicación"/>
+											<input class="form-control" type=text contenteditable="false" list=browsers name="ubicacion" id="ubicacion" placeholder="Ubicaci&oacute;n"/>
 												<datalist id=browsers >
    													<option value=11 label="1er cuatrimestre - 1 nivel">
    													<option value=12 label="2do cuatrimestre - 1 nivel">
@@ -69,9 +69,9 @@
 								</div>
 								<div class="col-md-6">
 									<div>
-										<label class="control-label" for="notaFinal">Nota Final</label>
+										<label class="control-label" for="notaFinal">Nota de final</label>
 										<div class="controls">
-											<input class="form-control" type="text" name="notaFinal" id="notaFinal" placeholder="Notal del final"/>
+											<input class="form-control" type="text" name="notaFinal" id="notaFinal" placeholder="Nota de final"/>
 										</div>
 									</div>
 								</div>

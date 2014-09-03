@@ -37,9 +37,9 @@
 									<thead>
 										<g:sortableColumn property="materia" title="Nombre" />
 										<g:sortableColumn property="profesor" title="Profesor" />
-										<g:sortableColumn property="anioDeCursada" title="Año de Cursada" />
-										<g:sortableColumn property="ubicacion" title="Ubicacion" />
-										<g:sortableColumn property="finalAprobado" title="Aprobo Final" />
+										<g:sortableColumn property="anioDeCursada" title="A&ntilde;o de cursada" />
+										<g:sortableColumn property="ubicacion" title="Ubicaci&oacute;n" />
+										<g:sortableColumn property="finalAprobado" title="Aprob&oacute; final" />
 									</thead>
 									<tbody>
 										<g:each in="${materias}" status="i"
@@ -61,7 +61,7 @@
 					</div>
 					</div>
 				</div>
-			<g:link class="btn btn-primary" action="create"> Agregar Materia </g:link>
+			<g:link class="btn btn-primary" action="create"> Agregar materia </g:link>
 		</div>
 		</div>
 	</body>

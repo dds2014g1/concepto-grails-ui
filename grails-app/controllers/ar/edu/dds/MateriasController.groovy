@@ -98,9 +98,9 @@ def list() {
 			materiaInstance = MateriasHome.getInstance().getMateria(id)
 			mapear(materiaInstance, params)
 			MateriasHome.getInstance().actualizarMateria(materiaInstance)
-			message = "La materia ha sido actualizada con exito"
+			message = "La materia ha sido actualizada con &oacute;xito"
 		}else{
-			message = "Campo obligatorio: nombre"
+			message = "Campo obligatorio: Nombre"
 		}
 		flash.message = message
 		redirect(action: "list")
@@ -111,7 +111,7 @@ def list() {
 	def show(long id) {
 		def getInstance = materiasHome.getMateria(id)
 		if (!getInstance) {
-			flash.message = "materia" + id + "no encontrado"
+			flash.message = "Materia" + id + "no encontrado"
 			redirect (action: "list")
 			
 		}else {
