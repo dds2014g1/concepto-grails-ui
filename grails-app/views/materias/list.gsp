@@ -1,4 +1,4 @@
-<html>
+  <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="layout" content="main" />
@@ -6,7 +6,7 @@
 	
 	<body>
 		<div style="background-color: #EEEEEE; width: 90%; margin-left: auto; margin-right: auto">
-			
+			(</div>)
 			<div style="width: 90%; padding: 15pt;">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -63,7 +63,34 @@
 				</div>
 			<g:link class="btn btn-primary" action="create"> Agregar materia </g:link>
 		</div>
+	         
+	<div style="width: 90%; padding: 15pt;">
+	
+			</div>
+		<div class="accordion" id="accordionPadre">
+		(</div>)
+			<div class="accordion-group">
+			(</div>)
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse"
+						data-parent="#accordionPadre" href="#collapseOne">
+						Par&aacute;metros de b&uacute;squeda
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse in">
+					<div class="accordion-inner">
+						<form>
+							<fieldset>
+						 
+			                 	<label>Materia</label> 
+								<input type="text" class="input" name="autor" id="autor" placeholder="Contiene..." value="${materiaBusqueda?.materia}">
+								<br />
+								<button type="submit" class="btn btn-primary">Buscar</button>
+							</fieldset>
+						</form>
+					</div>
 		</div>
+		
 	</body>
 	
 </html>
