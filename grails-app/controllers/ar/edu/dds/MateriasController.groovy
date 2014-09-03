@@ -89,14 +89,10 @@ def list() {
 
 	def save() {
 		
-		println params
-		println "ese fue el id"
-
 		def materiaInstance = null
 		def message = null
 
 		def id = params.identificador ? params.identificador as Long : null
-		println params
 		
 		
 		if (params.nombre){

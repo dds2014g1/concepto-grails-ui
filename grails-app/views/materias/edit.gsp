@@ -51,19 +51,18 @@
 									<div>
 										<label class="control-label" for="ubicacion">Ubicaci&oacute;n</label>
 										<div class="controls">
-											<input class="form-control" type=text contenteditable="false" list=browsers name="ubicacion" id="ubicacion" placeholder="Ubicaci&oacute;n"/>
-												<datalist id=browsers >
-   													<option value=11 label="1er cuatrimestre - 1 nivel">
-   													<option value=12 label="2do cuatrimestre - 1 nivel">
-   													<option value=21 label="1er cuatrimestre - 2 nivel">
-   													<option value=22 label="2do cuatrimestre - 2 nivel">
-   													<option value=31 label="1er cuatrimestre - 3 nivel">
-   													<option value=32 label="2do cuatrimestre - 3 nivel">
-   													<option value=41 label="1er cuatrimestre - 4 nivel">
-   													<option value=42 label="2do cuatrimestre - 4 nivel">
-   													<option value=51 label="1er cuatrimestre - 5 nivel">
-   													<option value=52 label="2do cuatrimestre - 5 nivel">   																										
-												</datalist>											
+												<select class="form-control" name="ubicacion" id="ubicacion" placeholder="Seleccione la opcion correcta">
+   													<option value=11>"1er cuatrimestre - 1 nivel"</option>
+   													<option value=12>"2do cuatrimestre - 1 nivel"</option>
+   													<option value=21>"1er cuatrimestre - 2 nivel"</option>
+   													<option value=22>"2do cuatrimestre - 2 nivel"</option>
+   													<option value=31>"1er cuatrimestre - 3 nivel"</option>
+   													<option value=32>"2do cuatrimestre - 3 nivel"</option>
+   													<option value=41>"1er cuatrimestre - 4 nivel"</option>
+   													<option value=42>"2do cuatrimestre - 4 nivel"</option>
+   													<option value=51>"1er cuatrimestre - 5 nivel"</option>
+   													<option value=52>"2do cuatrimestre - 5 nivel"</option>   																										
+												</select>											
 										</div>
 									</div>
 								</div>
@@ -78,7 +77,7 @@
 								<div class="col-md-12">
 									<div class="buttons">
 										<br>
-										<g:actionSubmit action="save" controller="materia" value="Aceptar"/>
+										<g:actionSubmit class="btn btn-primary" action="save" controller="materia" value="Aceptar"/>
 										<g:link class="btn btn-primary" action="list">
 											Cancelar
 										</g:link>
