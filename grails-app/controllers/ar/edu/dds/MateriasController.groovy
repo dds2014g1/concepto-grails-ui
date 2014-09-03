@@ -12,8 +12,12 @@ class MateriasController {
 	}
 	
 def list() {
-	
-		[materias: MateriasHome.instance.materias, materiasCantTotal:MateriasHome.instance.materias.size ]
+		String nombre = params.nombreMateria ? params.nombreMateria : ""
+		
+		
+		[ materias: MateriasHome.instance.buscarMaterias(nombre), 
+		  materiasCantTotal:MateriasHome.instance.materias.size,
+		  nombreMateria: nombre ]
 	}
 	
 	

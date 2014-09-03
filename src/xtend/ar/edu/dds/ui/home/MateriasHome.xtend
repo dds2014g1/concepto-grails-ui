@@ -58,6 +58,10 @@ class MateriasHome {
 		materias.findFirst[m|m.id.equals(id)]
 	}
 	
+	def buscarMaterias(String parteDelNombre) {
+		materias.filter[m | parteDelNombre.empty || m.nombre.toLowerCase.contains(parteDelNombre.toLowerCase)]
+	}
+	
 	def boolean contieneMateria(String nombreMateria){
 		materias.map[m|m.nombre].contains(nombreMateria)
 	}

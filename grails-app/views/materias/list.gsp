@@ -5,30 +5,46 @@
 	</head>
 	
 	<body>
-		<div style="background-color: #EEEEEE; width: 90%; margin-left: auto; margin-right: auto">
-			(</div>)
-			<div style="width: 90%; padding: 15pt;">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h2> Seguidor de carrera: </h2>
-					</div>
+		<div style="width: 90%; padding: 15pt;">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2> Seguidor de carrera: </h2>
 				</div>
 			</div>
+		</div>
 			
-			<div style="width: 90%; padding: 15pt;">
+		<div style="width: 90%; padding: 15pt;">
+			<g:if test="${flash.message}">
+				<div class="alert alert-info">
+					${flash.message}
+				</div>
+			</g:if>	
 				
-				<g:if test="${flash.message}">
-					<div class="alert alert-info">
-						${flash.message}
-					</div>
-				</g:if>	
-				
-				<div class="panel-group" id="accordion2">
+			<div class="panel-group" id="accordion2">
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading" style="height: 55px;">
 						<a class="accordion-toggle" data-toggle="collapse"
 							data-parent="#accordion2" href="#collapseTwo">Resultados: ${materiasCantTotal } 
 						</a>
+						
+						
+						<div style="float: right;">
+							<div class="accordion-group">
+								<div id="collapseOne" class="accordion-body collapse in">
+									<div class="accordion-inner">
+										<form>
+											<fieldset>
+							                 	<label>Materia: </label> 
+												<input type="text" class="input" name="nombreMateria" id="nombreMateria" placeholder="Contiene..." value="${nombreMateria}">
+												<button type="submit" class="btn btn-primary">Buscar</button>
+											</fieldset>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
 					</div>
 					<div id="collapseTwo" class="panel-collapse collapse in">
 						<div class="panel-body">
@@ -63,34 +79,5 @@
 				</div>
 			<g:link class="btn btn-primary" action="create"> Agregar materia </g:link>
 		</div>
-	         
-	<div style="width: 90%; padding: 15pt;">
-	
-			</div>
-		<div class="accordion" id="accordionPadre">
-		(</div>)
-			<div class="accordion-group">
-			(</div>)
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordionPadre" href="#collapseOne">
-						Par&aacute;metros de b&uacute;squeda
-					</a>
-				</div>
-				<div id="collapseOne" class="accordion-body collapse in">
-					<div class="accordion-inner">
-						<form>
-							<fieldset>
-						 
-			                 	<label>Materia</label> 
-								<input type="text" class="input" name="autor" id="autor" placeholder="Contiene..." value="${materiaBusqueda?.materia}">
-								<br />
-								<button type="submit" class="btn btn-primary">Buscar</button>
-							</fieldset>
-						</form>
-					</div>
-		</div>
-		
 	</body>
-	
 </html>
