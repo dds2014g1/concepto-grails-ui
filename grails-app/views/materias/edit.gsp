@@ -51,8 +51,8 @@
 									<div>
 										<label class="control-label" for="ubicacion">Ubicaci&oacute;n</label>
 										<div class="controls">
-												<select class="form-control" name="ubicacion" id="ubicacion" placeholder="Seleccione la opcion correcta">
-   													<option value=11>"1er cuatrimestre - 1 nivel"</option>
+												<select class="form-control" name="ubicacion" id="ubicacion" placeholder="Seleccione la opcion correcta" >
+   													<option value=11 >"1er cuatrimestre - 1 nivel"</option>
    													<option value=12>"2do cuatrimestre - 1 nivel"</option>
    													<option value=21>"1er cuatrimestre - 2 nivel"</option>
    													<option value=22>"2do cuatrimestre - 2 nivel"</option>
