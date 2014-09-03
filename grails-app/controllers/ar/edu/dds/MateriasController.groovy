@@ -97,5 +97,20 @@ class MateriasController {
 		flash.message = message
 		redirect(action: "list")
 	}
+	
+	
+	// esto es un contador de materias estaria bueno ponerlo en los resultados de la busqueda
+	def show(long id) {
+		def getInstance = materiasHome.getMateria(id)
+		if (!getInstance) {
+			flash.message = "materia" + id + "no encontrado"
+			redirect (action: "list")
+			
+		}else {
+		[materiaInstance : materiaInstance]}
+		
+		
+	}
+	
 }
 
