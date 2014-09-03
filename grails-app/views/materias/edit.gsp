@@ -21,7 +21,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<form class="form-horizontal" action="save" method="post">
-							<g:hiddenField name="id" value="${materiaInstance?.id}" />
+							<g:hiddenField name="identificador" value="${materiaInstance?.id}" />
 							<div class="row">
 					  			<div class="col-md-6">
 									<div>
@@ -78,7 +78,7 @@
 								<div class="col-md-12">
 									<div class="buttons">
 										<br>
-										<input type="submit" class="btn btn-primary" value="Aceptar" />
+										<g:actionSubmit action="save" controller="materia" value="Aceptar"/>
 										<g:link class="btn btn-primary" action="list">
 											Cancelar
 										</g:link>
