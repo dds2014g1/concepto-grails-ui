@@ -51,7 +51,19 @@
 									<div>
 										<label class="control-label" for="ubicacion">Ubicación</label>
 										<div class="controls">
-											<input class="form-control" type="text" name="ubicacion" id="ubicacion" placeholder="Ubicación" value="${materiaInstance?.ubicacion}" />
+											<input class="form-control" type=text contenteditable="false" list=browsers name="ubicacion" id="ubicacion" placeholder="Ubicación"/>
+												<datalist id=browsers >
+   													<option value=11 label="1er cuatrimestre - 1 nivel">
+   													<option value=12 label="2do cuatrimestre - 1 nivel">
+   													<option value=21 label="1er cuatrimestre - 2 nivel">
+   													<option value=22 label="2do cuatrimestre - 2 nivel">
+   													<option value=31 label="1er cuatrimestre - 3 nivel">
+   													<option value=32 label="2do cuatrimestre - 3 nivel">
+   													<option value=41 label="1er cuatrimestre - 4 nivel">
+   													<option value=42 label="2do cuatrimestre - 4 nivel">
+   													<option value=51 label="1er cuatrimestre - 5 nivel">
+   													<option value=52 label="2do cuatrimestre - 5 nivel">   																										
+												</datalist>											
 										</div>
 									</div>
 								</div>
@@ -59,7 +71,7 @@
 									<div>
 										<label class="control-label" for="notaFinal">Nota Final</label>
 										<div class="controls">
-											<input class="form-control" type="text" name="notaFinal" id="notaFinal" placeholder="Notal del final" value="" />
+											<input class="form-control" type="text" name="notaFinal" id="notaFinal" placeholder="Notal del final"/>
 										</div>
 									</div>
 								</div>

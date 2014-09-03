@@ -1,6 +1,7 @@
 package ar.edu.dds
 
 import ar.edu.dds.ui.domain.Materia
+import ar.edu.dds.ui.domain.Ubicacion
 import ar.edu.dds.ui.home.MateriasHome
 
 
@@ -63,7 +64,11 @@ def list() {
 			materia.profesor = null
 		}
 		if (params.ubicacion) {
-			materia.ubicacion = new Integer(params.ubicacion)
+			def int cuatrimestre = new Integer(params.ubicacion) / 10
+			def int nivel = new Integer(params.ubicacion) % 10
+			
+			def ubiInstance = new Ubicacion(cuatrimestre, nivel)
+			materia.ubicacion = ubiInstance		
 		} else {
 			materia.ubicacion = null
 		}
